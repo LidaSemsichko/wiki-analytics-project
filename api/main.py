@@ -251,17 +251,16 @@ def get_hourly_report(
 ):
     now = datetime.now(timezone.utc)
 
-    current_hour = now.replace(minute=0, second=0, microsecond=0)
-    start_time = current_hour - timedelta(hours=hours)
+    start_time = now - timedelta(hours=hours)
 
     query = """
         SELECT domain, created_at, page_id, page_title, user_id, user_name, is_bot
         FROM raw_pages
-        WHERE domain = %s AND created_at >= %s AND created_at < %s
+        WHERE domain = %s AND created_at >= %s AND created_at <= %s
         LIMIT 5000
     """
 
-    rows = list(session.execute(query, (domain, start_time, current_hour)))
+    rows = list(session.execute(query, (domain, start_time, now)))
 
     buckets = {}
 

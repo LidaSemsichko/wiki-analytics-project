@@ -554,6 +554,8 @@ http://localhost:8501
 Invoke-RestMethod http://localhost:8000/health
 ```
 
+![Health check](results/health.png)
+
 ---
 
 ### Список доменів
@@ -561,6 +563,8 @@ Invoke-RestMethod http://localhost:8000/health
 ```powershell
 Invoke-RestMethod http://localhost:8000/api/domains
 ```
+
+![Список доменів](results/domain_list.png)
 
 ---
 
@@ -570,6 +574,8 @@ Invoke-RestMethod http://localhost:8000/api/domains
 Invoke-RestMethod http://localhost:8000/api/metrics/language
 ```
 
+![Language activity metrics](results/language_activity_metrics.png)
+
 ---
 
 ### Bot activity metrics
@@ -577,6 +583,8 @@ Invoke-RestMethod http://localhost:8000/api/metrics/language
 ```powershell
 Invoke-RestMethod http://localhost:8000/api/metrics/bots
 ```
+
+![Bot activity metrics](results/bot_activity_metrics.png)
 
 ---
 
@@ -586,6 +594,8 @@ Invoke-RestMethod http://localhost:8000/api/metrics/bots
 Invoke-RestMethod http://localhost:8000/api/alerts/spam
 ```
 
+![Spam alerts](results/spam_alerts.png)
+
 ---
 
 ### Breaking news alerts
@@ -593,6 +603,8 @@ Invoke-RestMethod http://localhost:8000/api/alerts/spam
 ```powershell
 Invoke-RestMethod http://localhost:8000/api/alerts/breaking-news
 ```
+
+![Breaking news alerts](results/breaking_news.png)
 
 ---
 
@@ -602,6 +614,8 @@ Invoke-RestMethod http://localhost:8000/api/alerts/breaking-news
 Invoke-RestMethod "http://localhost:8000/api/reports/hourly?domain=en.wikipedia.org&hours=6"
 ```
 
+![Hourly report](results/horly_report.png)
+
 ---
 
 ### Editor patterns
@@ -609,6 +623,8 @@ Invoke-RestMethod "http://localhost:8000/api/reports/hourly?domain=en.wikipedia.
 ```powershell
 Invoke-RestMethod "http://localhost:8000/api/analytics/editor-patterns?min_pages=5"
 ```
+
+![Editor patterns](results/editor_patterns.png)
 
 ---
 
